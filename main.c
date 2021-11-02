@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:06 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/01 20:46:22 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/02 20:38:05 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,109 @@ int main(int argc, char **argv){
     //   printf("%s",argv[1]);
     
     //memmove-------
-    ft_memmove(argv[1], argv[1] + 3, strlen(argv[1] + 3));
-    printf("%s\n",argv[1]);
-    // strlcpy
+    // ft_memmove(argv[1], argv[1] + 3, strlen(argv[1] + 3));
+    // printf("%s\n",argv[1]);
     
+    
+    // strlcpy-----------------------
+        // char  dst[10];
+        // char  dst1[10];
+        // int res2, res1;
+        // char src[14] = "hello world !";
+        // res2 = ft_strlcpy(dst, src, 9);
+        // res1 = strlcpy(dst1, src, 9);
+        // puts(dst);
+        // puts(dst1);
+    
+    // strlcat-------------------------
+        // char  dst[10] = "hi";
+        // char  dst1[10] = "hi";
+        // int res2, res1;
+        // char src[100] = "hello world!";
+        // res2 = ft_strlcat(dst, src, 4);
+        // res1 = strlcat(dst1, src, 4);
+        // printf("%d\n", res1);
+        // printf("%d\n", res2);
+        
+        // puts(dst);
+        // puts(dst1);
+    
+    //toupper-----------------
+    // 
+    // printf(" %d ", toupper(c));
+
+    //tolower---------------------
+        //printf(" %d ", tolower(c));
+        
+    // strchr------------
+    
+        // char src[10] = "hello";
+        // char c = 'o';
+        // char * st;
+        // st = ft_strchr(src, c);
+        // puts(st);
+        
+    // strrchr------------
+    
+        //  char src[10] = "heollohh";
+        //  char c = 'o';
+        //  char * st;
+        //  st = ft_strrchr(src, c);
+        //  puts(st);
+
+    // strncmp
+        // char s1[10] = "healo";
+        // char s2[10] = "heclo2";
+        // int res = ft_strncmp(s1, s2, 3);
+        // if(res > 0)
+        //     printf("s1 greater than s2");
+        // else if (res < 0)
+        //     printf("s1 less than s2");
+        //     else
+        //         printf("s1 eqaul to s2");
+    // memchr --------------------------
+//    const char str[] = "http://www.tutorialspoint.com";
+//    const char ch = '-';
+//    char *ret;
+
+//    ret = memchr(str, ch, strlen(str));
+
+//    printf("String after |%c| is - |%s|\n", ch, ret);
+
+   
+    // memcmp------------------------------
+        //     char str1[15];
+        //     char str2[15];
+        //    int ret;
+
+        //    memcpy(str1, "aBcdef", 6);
+        //    memcpy(str2, "abCDEF", 6);
+
+        //    ret = memcmp(str1, str2, 5);
+
+        //    if(ret > 0) {
+        //       printf("str2 is less than str1");
+        //    } else if(ret < 0) {
+        //       printf("str1 is less than str2");
+        //    } else {
+        //       printf("str1 is equal to str2");
+        //    }
+
+    // calloc -------------------------------------------
+        // int i;
+        // int * pointer = (int *) ft_calloc( 13, sizeof(int) );
+
+        // for (i=0; i<13; i++ ) {
+        //     printf( "%d ", pointer[i] );
+        //     }
+        // printf( "\n" );
+        // free( pointer );
+
+
+
+
+
+
+        return 0;
     
  }
