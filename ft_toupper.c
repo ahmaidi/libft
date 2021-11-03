@@ -6,14 +6,15 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:22:13 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/02 14:17:21 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:28:05 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int    ft_toupper(int c){
-    int up = 'a' - 'A';
+    unsigned int up;
+    up = 'a' - 'A';
     if(c >= 'a' && c <= 'z'){
         c -= up;
         return c;

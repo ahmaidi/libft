@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:39:10 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/02 20:50:09 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/03 15:25:55 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,6 @@ char *  ft_strdup(const char *s1)
         p[i] = s1[i];
         i++;
     }
+    p[i] = '\0';
     return p;
-}
-int main() {
-
-    const char * original = "The original string.";
-
-    // On duplique la chaîne de caractères initiale.
-    char * copy = ft_strdup( original );
-    
-    // On passe chaque lettre en majuscule.
-    char * ptr = copy;
-    while( *ptr != '\0' ) {
-        *ptr = ft_toupper( *ptr );
-        ptr++;
-    }
-
-    // On affiche la chaîne finale
-    printf( "%s\n", copy );
-
-    // Sans oublier de libérer l'espace mémoire au final.
-    free( copy );
-
-    
 }

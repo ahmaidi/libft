@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:06 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/02 20:38:05 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/03 19:48:52 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,7 +174,12 @@ int main(int argc, char **argv){
         //    } else {
         //       printf("str1 is equal to str2");
         //    }
-
+    // atoi----------------------------------------
+        // int p,q;
+		// p = ft_atoi( argv[1]);
+		// q = atoi(argv[1]);
+		// printf("%d\n",p);
+		// printf("%d\n",q);
     // calloc -------------------------------------------
         // int i;
         // int * pointer = (int *) ft_calloc( 13, sizeof(int) );
@@ -186,10 +191,40 @@ int main(int argc, char **argv){
         // free( pointer );
 
 
+    // strdup----------------------------------------
+    // const char * original = "The original string.";
+
+    // // On duplique la chaîne de caractères initiale.
+    // char * copy = ft_strdup( original );
+    
+    // // On passe chaque lettre en majuscule.
+    // char * ptr = copy;
+    // while( *ptr != '\0' ) {
+    //     *ptr = ft_toupper( *ptr );
+    //     ptr++;
+    // }
+
+    // // On affiche la chaîne finale
+    // printf( "%s\n", copy );
+
+    // // Sans oublier de libérer l'espace mémoire au final.
+    // free( copy );
+
+    //strnstr----------------------------------
+    
+    // char str[] = "hllo world !";
+    // char str1[] = "llo";
+    // char * str2;
+    // str2 = ft_strnstr(str, str1, 2);
+    // puts(str2);
+    
+    char *dst = "hiihello world jjkckjhhdjkchegg";
+    char *src = "ello";
+
+    printf("%s \n", strnstr(dst, src, 8));
 
 
-
-
+    
         return 0;
     
  }
