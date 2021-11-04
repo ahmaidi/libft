@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:41:06 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/03 19:48:52 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/04 20:18:03 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,12 +102,12 @@ int main(int argc, char **argv){
         // puts(dst1);
     
     // strlcat-------------------------
-        // char  dst[10] = "hi";
-        // char  dst1[10] = "hi";
+        // char  dst[10] = "hill";
+        // char  dst1[10] = "hill";
         // int res2, res1;
         // char src[100] = "hello world!";
-        // res2 = ft_strlcat(dst, src, 4);
-        // res1 = strlcat(dst1, src, 4);
+        // res1 = ft_strlcat(dst, src, 6);
+        // res2 = strlcat(dst1, src, 6);
         // printf("%d\n", res1);
         // printf("%d\n", res2);
         
@@ -217,14 +217,24 @@ int main(int argc, char **argv){
     // char * str2;
     // str2 = ft_strnstr(str, str1, 2);
     // puts(str2);
+    //substr-------------------------------------
+    // char *str = "ahmed";
+	// char *str1;
+	// str1 = ft_substr(str, 2, 2);
+	// puts(str1);
+
+    // strjoin---------------------------------------
+    // char *str = "ahm";
+	// char *str1 = "alihefefefecce";
+	// char *join;
+	// join = ft_strjoin(str, str1);
+	// puts(join);
     
-    char *dst = "hiihello world jjkckjhhdjkchegg";
-    char *src = "ello";
+    //strtrim------------------------------------------
+    // char *s;
 
-    printf("%s \n", strnstr(dst, src, 8));
-
-
-    
+	// s = "aaabbbbccccdeddbbbccccbjfgkljdglkfjgkjbaaa";
+	// printf("%s\n", ft_strtrim(s, "abc\0"));
         return 0;
     
  }

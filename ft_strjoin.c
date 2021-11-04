@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 18:59:46 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 12:04:16 by ahmaidi          ###   ########.fr       */
+/*   Created: 2021/11/04 17:52:46 by ahmaidi           #+#    #+#             */
+/*   Updated: 2021/11/04 18:20:24 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*str_join;
+	size_t	s1_len;
+	size_t	s2_len;
+	int		i;
 
 	i = 0;
-	while (i < n)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	str_join = (char *)malloc(sizeof(char) * (s1_len + s2_len));
+	if (!str_join)
+		return (NULL);
+	while (i < s1_len)
 	{
-		((char *)s)[i] = 0;
+		str_join[i] = s1[i];
 		i++;
 	}
+	i = 0;
+	while (i < s2_len)
+	{
+		str_join[i + s1_len] = s2[i];
+		i++;
+	}
+	str_join[i + s1_len] = '\0';
+	return (str_join);
 }

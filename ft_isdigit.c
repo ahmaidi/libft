@@ -6,18 +6,15 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:05:02 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/01 18:31:55 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/04 10:42:37 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-
-int ft_isdigit(int c){
-    if(c >= '0' && c <= '9')
-        return 1;
-    return 0;
-
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
-

@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:01:05 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/03 19:54:34 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:47:12 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	}
 	return (0);
 }
-

@@ -6,18 +6,22 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:57:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/03 18:28:23 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:54:17 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-int    ft_tolower(int c){
-    unsigned int lw;
-    lw = 'a' - 'A';
-    if(c >= 'a' && c <= 'z'){
-        c += lw;
-        return c;
-    }else
-        return c;
+int	ft_tolower(int c)
+{
+	unsigned int	lw;
+
+	lw = 'a' - 'A';
+	if (c >= 'a' && c <= 'z')
+	{
+		c += lw;
+		return (c);
+	}
+	else
+		return (c);
 }
