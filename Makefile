@@ -1,24 +1,20 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/04 12:49:36 by ahmaidi           #+#    #+#              #
-#    Updated: 2021/11/04 12:53:32 by ahmaidi          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+CC=cc
+NAME=libft.a
+FLAGS=-Wall -Werror -Wextra -c
+C_FILES=$(wildcard *.c)
+O_FILES=*.o
 
-NAME = libft.ahmaidi
+all: $(NAME)
 
-FLAG = -Wall -Wextra -Werror
+$(NAME): OBJ
+	ar rcs $(NAME) $(O_FILES)
 
-SRC = ft_atoi.c ft_bzero.Created
+OBJ:
+	$(CC) $(FLAGS) $(C_FILES)
 
-OBJ = $(SRCS:.c=.o)
+re: fclean all
 
-all:
-$(NAME)
-	gcc $(FLAG) $(SRC) -c
-	ar 
+fclean: clean
+	rm -f $(NAME)
+clean:
+	rm -f $(O_FILES)

@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:52:07 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 12:02:57 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 11:48:24 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static const char	*ft_del_fespace(const char *str)
 	return (str);
 }
 
-int	convert_to_number(const char *str)
+static int	convert_to_number(const char *str)
 {
 	int					i;
 	unsigned long long	res;

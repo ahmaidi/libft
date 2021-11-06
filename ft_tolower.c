@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:57:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 11:54:17 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 13:27:18 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_tolower(int c)
 	unsigned int	lw;
 
 	lw = 'a' - 'A';
-	if (c >= 'a' && c <= 'z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		c += lw;
 		return (c);

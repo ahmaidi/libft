@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:33:45 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 18:13:51 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 12:57:11 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	int		i;
-	int		j;
+	char				*substr;
+	unsigned int		i;
+	unsigned int		j;
 
 	j = 0;
 	i = start;

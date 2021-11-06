@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:14:43 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 10:59:23 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 12:45:17 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

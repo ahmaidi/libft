@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:13:23 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 11:52:16 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 14:42:29 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,10 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (NULL);
+}
+int main()
+{
+	char s[] = "ripouillet";
+	printf("%s\n",ft_strrchr(s,'i' + 1));
+	printf("%s\n",strrchr(s, 'i' + 1));
 }

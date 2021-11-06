@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:16:17 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 15:20:46 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 11:12:42 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
 	void	*p;
 
-	i = 0;
 	p = (void *)malloc(count * size);
 	if (!p)
 		return (NULL);

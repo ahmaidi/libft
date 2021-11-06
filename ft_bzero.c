@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:59:46 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 12:04:16 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 12:44:26 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

@@ -6,13 +6,13 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:01:05 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/04 11:47:12 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/06 12:57:41 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	unsigned int	i;
 	unsigned int	j;
