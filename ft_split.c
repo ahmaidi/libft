@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:24:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 20:01:17 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 20:23:12 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,13 @@ char	**ft_split(char const *s, char c)
 	tab_str = (char **)malloc(sizeof(char*) * (nbr_of_word + 1));
 	if(!tab_str)
 		return (NULL);
-	while ( i < nbr_of_word)
-	{
 		while (j < (int)ft_strlen(s))
 		{
-			if(s[j] != c)
+			if(s[j] != c && i < nbr_of_word)
 			{
 				temp = j;
 				tab_str[i] = (char *)malloc(sizeof(char *) * (nbr_of_char(&j, (char *)s, c) + 1));
+				
 				if(!tab_str[i])
 					return (NULL);
 				t = 0;
@@ -79,21 +78,11 @@ char	**ft_split(char const *s, char c)
 					t++;
 				}
 				tab_str[i][t]= 0;
+				i++;
 			}
 			j++;
 		}
-		printf("%s\n",tab_str[i]);
-		i++;
-		
-	}
+
 	tab_str[i] = NULL;
 	return (tab_str);
-}
-int main()
-{
-	int i ;
-	i = 0;
-	char **p = ft_split("     word    45", ' ');
-	p[0]= "44";
-	return 0;
 }
