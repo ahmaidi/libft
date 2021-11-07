@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:52:07 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 11:48:24 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 12:03:15 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static const char	*ft_del_fespace(const char *str)
 static int	convert_to_number(const char *str)
 {
 	int					i;
-	unsigned long long	res;
+	int 	res;
 
 	res = 0;
 	i = 0;
@@ -41,7 +41,7 @@ static int	convert_to_number(const char *str)
 int	ft_atoi(const char *str)
 {
 	int					sign;
-	unsigned long long	res;
+	int	res;
 
 	sign = 1;
 	str = ft_del_fespace(str);
@@ -53,7 +53,7 @@ int	ft_atoi(const char *str)
 	else if (str[0] == '+')
 		str++;
 	res = convert_to_number(str);
-	if (res > 9223372036854775807)
+	if (res > 2147483647)
 	{	
 		if (sign > 0)
 			return (-1);

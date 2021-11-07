@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:13:23 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 14:42:29 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 10:21:17 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	int	i;
 
-	i = ft_strlen(s) - 1;
-	while (i >= 0)
+	i = (int)ft_strlen(s) - 1;
+	if(c)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i--;
+		if (c >= 256)
+			c -= 256;
+		while (i >= 0)
+		{
+			if (s[i] == c)
+				return ((char *)s + i);
+			i--;
+		}
+		return (NULL);
 	}
-	return (NULL);
-}
-int main()
-{
-	char s[] = "ripouillet";
-	printf("%s\n",ft_strrchr(s,'i' + 1));
-	printf("%s\n",strrchr(s, 'i' + 1));
+	else
+	 return ((char *)s + ft_strlen(s));
+	
 }

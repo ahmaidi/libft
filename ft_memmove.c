@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 20:20:42 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 14:26:22 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 09:41:10 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	int	i;
 
-	i = len - 1;
+	i = (int)len - 1;
 	if ((char *)dst > (char *)src)
 	{	
 		while (i >= 0)
 		{
-			((char *)dst)[(int)i] = ((char *)src)[(int)i];
+			((char *)dst)[i] = ((char *)src)[i];
+		
 			i--;
 		}
 	}
@@ -29,7 +30,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 
 		i = 0;
-		while (i < len)
+		while (i < (int)len)
 		{
 			((char *)dst)[i] = ((char *)src)[i];
 			i++;
@@ -37,16 +38,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-int		main()
-{
-	int i = 0;
-	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
-// 					{67, 67, 68, 68, 69, 0, 45};
-// char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
-	while( i < 6)
-	{
-		printf("%c\n",((char *)memmove(sResult + 1, sResult, 2))[i]);
-		printf("%c\n",((char *)ft_memmove(sResult + 1, sResult, 2))[i]);
-		i++;
-	}
-}
+ 

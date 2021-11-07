@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 12:09:36 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 09:49:43 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include<unistd.h>
 # include<string.h>
 # include<stdio.h>
-
+# include<ctype.h>
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
