@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:24:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 20:23:12 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/07 20:55:57 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ char	**ft_split(char const *s, char c)
 			if(s[j] != c && i < nbr_of_word)
 			{
 				temp = j;
-				tab_str[i] = (char *)malloc(sizeof(char *) * (nbr_of_char(&j, (char *)s, c) + 1));
-				
+				tab_str[i] = (char *)malloc(sizeof(char) * (nbr_of_char(&j, (char *)s, c) + 1));
 				if(!tab_str[i])
 					return (NULL);
 				t = 0;
@@ -77,7 +76,7 @@ char	**ft_split(char const *s, char c)
 					tab_str[i][t] = s[temp + t];
 					t++;
 				}
-				tab_str[i][t]= 0;
+				tab_str[i][t] = 0;
 				i++;
 			}
 			j++;
