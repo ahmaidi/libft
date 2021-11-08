@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:28:28 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 10:42:27 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:42:17 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	p = (char *)s1;
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	if(s1len < s2len)
-		p = (char *)s2;	
+	if (s1len < s2len)
+		p = (char *)s2;
 	while (i < n && p[i])
 	{
 		if (s1[i] != s2[i])

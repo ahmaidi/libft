@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:30:45 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 14:37:26 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:43:29 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	count_trim_size(const char *s1, const char *set)
 		return (len);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	while ( s1[i] && len >= 0 && ft_strchr(set, s1[len]))
+	while (s1[i] && len >= 0 && ft_strchr(set, s1[len]))
 	{
 		len--;
 		i++;

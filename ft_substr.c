@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:33:45 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 13:16:01 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:44:02 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	j = 0;
 	i = start;
-	if((int)len < 0)
+	if ((int)len < 0)
 		return (NULL);
-	if(len > ft_strlen(s))
+	if (len > ft_strlen(s))
 		len = ft_strlen(s);
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr || !s[0])

@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:13:23 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/07 10:21:17 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:42:59 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = (int)ft_strlen(s) - 1;
-	if(c)
+	if (c)
 	{
 		if (c >= 256)
 			c -= 256;
@@ -30,6 +30,5 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 	}
 	else
-	 return ((char *)s + ft_strlen(s));
-	
+		return ((char *)s + ft_strlen(s));
 }

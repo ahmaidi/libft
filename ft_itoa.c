@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 11:44:29 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 12:32:22 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 16:51:54 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,41 @@
 
 static size_t	size_of_n(int n)
 {
-	int	i;
+	int		i;
+	long	num;
 
 	i = 1;
+	num = n;
 	if (n < 0)
 	{
-		n = n * (-1);
+		num = n * (-1);
 		i = i + 1;
 	}
-	while (n / 10)
+	while (num / 10)
 	{
-		n = n / 10;
+		num = num / 10;
 		i++;
 	}
 	return (i);
 }
 
+static void	filling_str(char *s, int len, long num, int i)
+{
+	while (len != i)
+	{
+		s[len - 1] = (num % 10) + '0';
+		num = num / 10;
+		len --;
+	}
+}
+
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*s;
-	int		last;
-	int		i;
+	int				len;
+	char			*s;
+	int				last;
+	int				i;
+	long			num;
 
 	i = 0;
 	len = (int)size_of_n(n);
@@ -43,18 +56,14 @@ char	*ft_itoa(int n)
 	s = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s)
 		return (NULL);
+	num = n;
 	if (n < 0)
 	{
-		s[i] = '-';
-		n *= (-1);
-		i++;
+		*s = '-';
+		num = num * (-1);
+		i = i + 1;
 	}
-	while (len != i)
-	{
-		s[len - 1] = (n % 10) + '0';
-		n = n / 10;
-		len --;
-	}
+	filling_str(s, len, num, i);
 	s[last + 1] = '\0';
 	return (s);
 }
