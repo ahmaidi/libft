@@ -6,13 +6,13 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 11:44:29 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 12:40:02 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/08 12:32:22 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t size_of_n(int n)
+static size_t	size_of_n(int n)
 {
 	int	i;
 
@@ -32,34 +32,29 @@ static size_t size_of_n(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	len;
+	int		len;
 	char	*s;
-	size_t	last;
+	int		last;
+	int		i;
 
-	len = size_of_n(n);
-	printf("%zu\n",len);
-	last = len;
-	s = malloc(sizeof(char) * (len + 1));
-	printf("%p\n",s);
-	while (n / 10)
+	i = 0;
+	len = (int)size_of_n(n);
+	last = len - 1;
+	s = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (NULL);
+	if (n < 0)
 	{
-		printf("------------%d\n----------------",n % 10);
-		printf("------------%d\n----------------",n);
-		s[len] = n % 10 + '0';
+		s[i] = '-';
+		n *= (-1);
+		i++;
+	}
+	while (len != i)
+	{
+		s[len - 1] = (n % 10) + '0';
 		n = n / 10;
 		len --;
 	}
-	printf("%c\n",s[0]);
 	s[last + 1] = '\0';
 	return (s);
-}
-int main()
-{
-	int n;
-	n = 345678;
-	printf("%lu\n",size_of_n(n));
-	char *s;
-	s = ft_itoa(n);
-	printf("%d\n",n / 10);
-	// puts()
 }
