@@ -6,12 +6,13 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:52:07 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 14:35:24 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 17:31:40 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
+#include <stdlib.h>
 
 static const char	*ft_del_fespace(const char *str)
 {
@@ -23,15 +24,22 @@ static const char	*ft_del_fespace(const char *str)
 	return (str);
 }
 
-static int	convert_to_number(const char *str)
+static int	convert_to_number(const char *str, int sign)
 {
-	int	i;
-	int	res;
+	int		i;
+	long	res;
 
 	res = 0;
 	i = 0;
 	while (*(str + i) && ft_isdigit(*(str + i)))
 	{
+		if (res >= 922337203685477580)
+		{
+			if ((res > 922337203685477580 || *(str + i) - '0' > 7) && sign > 0)
+				return (-1);
+			if ((res > 922337203685477580 || *(str + i) - '0' > 8) && sign < 0)
+				return (0);
+		}
 		res = res * 10 + (*(str + i) - '0');
 		i++;
 	}
@@ -40,8 +48,8 @@ static int	convert_to_number(const char *str)
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	res;
+	int		sign;
+	long	res;
 
 	sign = 1;
 	str = ft_del_fespace(str);
@@ -52,15 +60,12 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[0] == '+')
 		str++;
-	res = convert_to_number(str);
-	if (res > 2147483647)
-	{	
-		if (sign > 0)
-			return (-1);
-		else
-		{
-			return (0);
-		}
-	}
+	res = convert_to_number(str, sign);
 	return (res * sign);
+}
+int main()
+{
+	char *num = "21474836474";
+    printf("%d\n%d\n",ft_atoi(num), atoi(NULL));
+
 }

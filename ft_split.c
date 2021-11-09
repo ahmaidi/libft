@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:24:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 15:54:03 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 15:22:00 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,18 @@ static void	filling_tab_str_i(char *tab, char const *s, int j, int temp)
 	tab[t] = 0;
 }
 
+static char	**free_tab(char **tab_str, int i)
+{
+	while (i != -1)
+	{
+		if (!(tab_str[i]))
+			free(tab_str[i]);
+			i--;
+	}
+	free(tab_str);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -71,7 +83,9 @@ char	**ft_split(char const *s, char c)
 
 	j = 0;
 	i = 0;
-	tab_str = malloc(sizeof(char *) * (nbr_of_words(s, c) + 1));
+	if (!s)
+		return (NULL);
+	tab_str = ft_calloc(sizeof(char *), (nbr_of_words(s, c) + 1));
 	if (!tab_str)
 		return (NULL);
 	while (j < (int)ft_strlen(s))
@@ -80,12 +94,11 @@ char	**ft_split(char const *s, char c)
 		{
 			temp = j;
 			tab_str[i] = malloc(sizeof(char) * (nbr_of_char(&j, s, c) + 1));
-			if (!tab_str[i])
-				return (NULL);
+			if (!(tab_str[i]))
+				return (free_tab(tab_str, i));
 			filling_tab_str_i(tab_str[i++], s, j, temp);
 		}
 		j++;
 	}
-	tab_str[i] = NULL;
 	return (tab_str);
 }

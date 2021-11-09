@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:52:46 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/06 12:51:36 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 18:19:27 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t			s2_len;
 	unsigned int	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

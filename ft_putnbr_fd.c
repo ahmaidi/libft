@@ -6,16 +6,58 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:32:19 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 21:34:25 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 13:53:30 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	size_of_n(int n)
+{
+	int		i;
+	long	num;
+
+	i = 1;
+	num = n;
+	if (n < 0)
+	{
+		num = n * (-1);
+	}
+	while (num / 10)
+	{
+		num = num / 10;
+		i *= 10;
+	}
+	return (i);
+}
+
+static void	filling_str(int fd, int len, long num)
+{
+	while (len != 0)
+	{
+		ft_putchar_fd((num / len) + '0', fd);
+		num = num % len;
+		len /= 10;
+	}
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s;
+	int				len;
+	long			num;
 
-	s = ft_itoa(n);
-	ft_putstr_fd(s, fd);
+	len = (int)size_of_n(n);
+	num = n;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		num = num * (-1);
+	}
+	filling_str(fd, len, num);
 }
+// int main()
+// {
+// 	int n = -2147483648;
+// 	ft_putnbr_fd(n, 1);
+// 	return 0;
+// }

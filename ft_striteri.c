@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:50:52 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 20:34:42 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 18:24:09 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {	
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (*(s + i))
 	{

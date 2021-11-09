@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:30:45 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/08 14:43:29 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/09 18:22:22 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		len;
 	char	*copy;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	count = 0;
 	len = ft_strlen(s1);
 	count = count_trim_size(s1, set);
 	len = len - count;
-	copy = (char *)malloc(sizeof(char) * len);
+	copy = (char *)malloc(sizeof(char) * (len + 1));
+	if (!copy)
+		return (NULL);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	j = 0;
