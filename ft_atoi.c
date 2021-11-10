@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:52:07 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/09 17:31:40 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/10 21:43:43 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,4 @@ int	ft_atoi(const char *str)
 		str++;
 	res = convert_to_number(str, sign);
 	return (res * sign);
-}
-int main()
-{
-	char *num = "21474836474";
-    printf("%d\n%d\n",ft_atoi(num), atoi(NULL));
-
 }
