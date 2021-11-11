@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/10 18:55:25 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/11 19:32:22 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}						t_list;	
+}						t_list;
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
