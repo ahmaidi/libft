@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:50:52 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/12 21:33:40 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/12 22:03:15 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-int main()
-{
-	char s[] = "hello";
-	ft_striteri(s,to_upper);
-	printf("%s\n",s);
-}
+// int main()
+// {
+// 	char s[] = "hello";
+// 	ft_striteri(s,to_upper);
+// 	printf("%s\n",s);
+// }
