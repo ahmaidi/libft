@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"stdexcept": "c",
-		"string": "c"
+		"string": "c",
+		"libft.h": "c"
 	}
 }

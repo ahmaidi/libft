@@ -6,12 +6,17 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:02:47 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/09 14:01:13 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/12 21:20:16 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+char to_upper(unsigned int i, char c)
+{
+	if(i != 0)
+		c -= 32;
+	return c;
+}
 char	*ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 {
 	int		i;
@@ -34,4 +39,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 	}
 	s2[i] = '\0';
 	return (s2);
+}
+int main()
+{
+	char s[] = "hello";
+	printf("%s\n",ft_strmapi(s,to_upper));
 }
