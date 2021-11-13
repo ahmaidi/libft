@@ -1,7 +1,0 @@
-{
-	"files.associations": {
-		"stdexcept": "c",
-		"string": "c",
-		"libft.h": "c"
-	}
-}

@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:21:16 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/09 15:58:02 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/13 15:21:31 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-// int main()
-// {
-// 	ft_putstr_fd("hello", 1);
-// }

@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:14:43 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/12 22:05:01 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/13 15:21:15 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// int main()
-// {
-// 	char *s = "hello";
-// 	char *s1 = "cello";
-// 	printf("%d\n",ft_memcmp(s,s1,5));
-
-// }

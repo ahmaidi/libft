@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:32:19 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/09 13:53:30 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/13 15:21:36 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	filling_str(fd, len, num);
 }
-// int main()
-// {
-// 	int n = -2147483648;
-// 	ft_putnbr_fd(n, 1);
-// 	return 0;
-// }
