@@ -6,15 +6,15 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:54:47 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/16 22:39:22 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/17 13:26:15 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void del(void * d)
-{
-	free(d);
-}
+// void del(void * d)
+// {
+// 	free(d);
+// }
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*next_position;
@@ -29,16 +29,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = next_position;
 	}
 }
-void	ft_print(t_list *lst)
-{
-	t_list *temp;
-	temp = lst;
-	while(temp)
-	{
-		printf("%s\n",temp->content);
-		temp = temp->next;
-	}		
-}
+// void	ft_print(t_list *lst)
+// {
+// 	t_list *temp;
+// 	temp = lst;
+// 	while(temp)
+// 	{
+// 		printf("%s\n",temp->content);
+// 		temp = temp->next;
+// 	}		
+// }
 
 // int main()
 // {
