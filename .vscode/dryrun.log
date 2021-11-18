@@ -16,6 +16,7 @@ gcc -Wall -Wextra -Werror -c -o ft_strncmp.o ft_strncmp.c
 gcc -Wall -Wextra -Werror -c -o ft_atoi.o ft_atoi.c
 gcc -Wall -Wextra -Werror -c -o ft_isalpha.o ft_isalpha.c
 gcc -Wall -Wextra -Werror -c -o ft_isdigit.o ft_isdigit.c
+ 
 gcc -Wall -Wextra -Werror -c -o ft_isalnum.o ft_isalnum.c
 gcc -Wall -Wextra -Werror -c -o ft_isascii.o ft_isascii.c
 gcc -Wall -Wextra -Werror -c -o ft_isprint.o ft_isprint.c
@@ -30,6 +31,7 @@ gcc -Wall -Wextra -Werror -c -o ft_split.o ft_split.c
 gcc -Wall -Wextra -Werror -c -o ft_itoa.o ft_itoa.c
 gcc -Wall -Wextra -Werror -c -o ft_strmapi.o ft_strmapi.c
 gcc -Wall -Wextra -Werror -c -o ft_putchar_fd.o ft_putchar_fd.c
+ 
 gcc -Wall -Wextra -Werror -c -o ft_putstr_fd.o ft_putstr_fd.c
 gcc -Wall -Wextra -Werror -c -o ft_putendl_fd.o ft_putendl_fd.c
 gcc -Wall -Wextra -Werror -c -o ft_putnbr_fd.o ft_putnbr_fd.c

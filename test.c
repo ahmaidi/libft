@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 19:22:21 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/18 16:21:14 by ahmaidi          ###   ########.fr       */
+/*   Created: 2021/11/18 11:06:51 by ahmaidi           #+#    #+#             */
+/*   Updated: 2021/11/18 11:10:19 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+void	*f(void *d)
 {
-	t_list	*list;
-
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
+	if (!d)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	if(*(int *)d % 2 == 0)
+		return (*(int *)d) * 2;
+	int a = 5;
+	int *b = &a;
+	*b = 10; 
 }
-// int main()
-// {
-// 	t_list	*lst;
-// 	char s[] = "hello";
-// 	lst = ft_lstnew(s);
-// 	printf("%s",lst->content);
-// }
