@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:02:47 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/13 15:23:17 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/19 23:11:31 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 	i = 0;
 	while (s[i])
 	{
-		s2[i] = (*f)(i, s[i]);
+		s2[i] = f(i, s[i]);
 		i++;
 	}
 	s2[i] = '\0';

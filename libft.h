@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:40 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/14 20:18:42 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/19 15:38:27 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 # define LIBFT_H
 # include<stdlib.h>
 # include<unistd.h>
-# include<string.h>
-# include<stdio.h>
-# include<ctype.h>
 
 typedef struct s_list
 {

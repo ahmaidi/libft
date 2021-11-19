@@ -6,13 +6,11 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:52:07 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/10 21:43:43 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/19 22:31:18 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 static const char	*ft_del_fespace(const char *str)
 {

@@ -6,7 +6,7 @@
 #    By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 20:12:24 by ahmaidi           #+#    #+#              #
-#    Updated: 2021/11/17 17:28:05 by ahmaidi          ###   ########.fr        #
+#    Updated: 2021/11/19 23:36:55 by ahmaidi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,15 +52,15 @@ FILES = ft_memset \
 		ft_putnbr_fd \
 		ft_striteri \
 
-FILES_B = 	ft_lstnew \
-	  		ft_lstadd_front \
-	  		ft_lstsize \
-	  		ft_lstlast \
-	  		ft_lstadd_back \
-	  		ft_lstdelone \
-	  		ft_lstclear \
-	  		ft_lstiter \
-	  		ft_lstmap
+FILES_B = 	ft_lstnew_bonus \
+	  		ft_lstadd_front_bonus \
+	  		ft_lstsize_bonus \
+	  		ft_lstlast_bonus \
+	  		ft_lstadd_back_bonus \
+	  		ft_lstdelone_bonus \
+	  		ft_lstclear_bonus \
+	  		ft_lstiter_bonus \
+	  		ft_lstmap_bonus
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
@@ -70,17 +70,21 @@ OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
+all: $(NAME)
 
-.c.o: $(SRCS)
-	$(CC) $(CFLAGS) -c -o $@ $<
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -c -g $(SRCS)
+	@echo "file objects created "
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
 bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
 
-all: $(NAME)
+$(OBJS_B):
+	$(CC) $(CFLAGS) -c -g $(SRCS_B)
+	$(AR) $(NAME) $(OBJS_B)
+
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)

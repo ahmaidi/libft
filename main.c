@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 11:06:51 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/18 11:10:19 by ahmaidi          ###   ########.fr       */
+/*   Created: 2021/11/19 18:13:04 by ahmaidi           #+#    #+#             */
+/*   Updated: 2021/11/19 23:45:47 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	*f(void *d)
+char	add_i(unsigned int i, char c)
 {
-	if (!d)
-		return (NULL);
-	if(*(int *)d % 2 == 0)
-		return (*(int *)d) * 2;
-	int a = 5;
-	int *b = &a;
-	*b = 10; 
+	c+= i;
+	return (c);
+}
+
+int main()
+{
+	printf("%d\n",strncmp(NULL,"helo",5));
+	return (0);
 }
