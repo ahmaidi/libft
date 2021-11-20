@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 19:05:57 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/17 16:35:39 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/20 16:19:59 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (copy_by_f);
 }
-
-			// ft_lstclear(&copy_by_f, del);
-			// return (NULL);
-
-			// ft_lstclear(&copy_by_f, del);
-			// return (NULL);
-// int main()
-// {
-// 	t_list	lst1;
-// 	t_list	lst2;
-// 	t_list	lst3;
-// 	t_list	lst4;	
-// }

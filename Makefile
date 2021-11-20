@@ -6,7 +6,7 @@
 #    By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 20:12:24 by ahmaidi           #+#    #+#              #
-#    Updated: 2021/11/19 23:36:55 by ahmaidi          ###   ########.fr        #
+#    Updated: 2021/11/20 13:07:17 by ahmaidi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ all: $(NAME)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) -c -g $(SRCS)
-	@echo "file objects created "
+	@echo "files objects created "
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
@@ -83,6 +83,7 @@ bonus: $(OBJS_B)
 
 $(OBJS_B):
 	$(CC) $(CFLAGS) -c -g $(SRCS_B)
+	@echo "files bonus's objects created "
 	$(AR) $(NAME) $(OBJS_B)
 
 

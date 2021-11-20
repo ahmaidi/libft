@@ -6,7 +6,7 @@
 /*   By: ahmaidi <ahmaidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 19:22:21 by ahmaidi           #+#    #+#             */
-/*   Updated: 2021/11/18 16:21:14 by ahmaidi          ###   ########.fr       */
+/*   Updated: 2021/11/20 15:16:36 by ahmaidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ t_list	*ft_lstnew(void *content)
 	list->next = NULL;
 	return (list);
 }
-// int main()
-// {
-// 	t_list	*lst;
-// 	char s[] = "hello";
-// 	lst = ft_lstnew(s);
-// 	printf("%s",lst->content);
-// }
